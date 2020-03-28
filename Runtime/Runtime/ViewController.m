@@ -20,12 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    UIGestureRecognizer*gesture = self.navigationController.interactivePopGestureRecognizer;
+    NSMutableArray * _targets = [gesture valueForKey:@"_targets"];
+    NSLog(@"%@",_targets);
 }
 - (IBAction)popAction:(id)sender {
     PopAnimateVC*vc = [[PopAnimateVC alloc] init];
     self.navigationController.popIndex = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)test{
 }
 
 
