@@ -29,7 +29,7 @@
 ```
 log输出
 
-![WechatIMG187](/Users/lvkk/Desktop/KKScreenPopGesture/WechatIMG187.jpeg)
+![UIGestureRecognizerTarget](https://img-blog.csdnimg.cn/20200328153445428.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x2bGVtbw==,size_16,color_FFFFFF,t_70)
 
 我们看到，原来每一个target-action是用UIGestureRecognizerTarget这样一个类来存储的，它也是一个私有类。
 苹果把许多的类做私有化也是有原因所在，其实在平时我们拿到这个类也是没有用的，他们的目的之一是避免对开发者公开无用的类，影响了封装性。所以在类的设计上，还是要向苹果学习。
