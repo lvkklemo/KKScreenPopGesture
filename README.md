@@ -5,12 +5,12 @@
 
 ```objc
  unsigned int count = 0;
-    Ivar * var = class_copyIvarList([UIPanGestureRecognizer class], &count);
-    for (int i=0; i<count; i++) {
-        Ivar _var = *(var+i);
-        NSLog(@"TypeEncoding:%s",ivar_getTypeEncoding(_var));
-        NSLog(@"Name :%s",ivar_getName(_var));
-    }
+ Ivar * var = class_copyIvarList([UIPanGestureRecognizer class], &count);
+   for (int i=0; i<count; i++) {
+      Ivar _var = *(var+i);
+      NSLog(@"TypeEncoding:%s",ivar_getTypeEncoding(_var));
+      NSLog(@"Name :%s",ivar_getName(_var));
+   }
 ```
 
 ```
@@ -23,7 +23,7 @@
 它是用数组来存储每一个target－action，所以可以动态的增加手势触发对象。那么又是什么存储每一个target-action呢？为了了解这个我们拿到这个属性的名字"_targets"通过kvc获取它，接着打印出来。
 
 ```objective-c
-      UIGestureRecognizer*gesture = self.navigationController.interactivePopGestureRecognizer;
+    UIGestureRecognizer*gesture = self.navigationController.interactivePopGestureRecognizer;
     NSMutableArray * _targets = [gesture valueForKey:@"_targets"];
     NSLog(@"%@",_targets);
 ```
